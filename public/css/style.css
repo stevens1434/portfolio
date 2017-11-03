@@ -62,10 +62,15 @@ hr {
   border-color: rgb(57, 171, 111);
 }
 
+#code {
+  z-index: 5;
+}
+
 #pageBreak {
   margin-bottom: 75%;
   font-size: 100px;
   font-family: 'Megrim', cursive;
+  text-align: left;
 }
 
 .mainTitle {

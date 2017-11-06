@@ -109,6 +109,7 @@ WRITE YOUR CUSTOM SCRIPTS BELOW
   setTimeout(function() {
     console.log(window);
     $(".mainDiv").show();
+    $('.space').hide();
     $(".spinner").hide();
   }, 3000);
 

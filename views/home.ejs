@@ -1,10 +1,33 @@
 <body data-spy="scroll" data-target="#menu-section">
 
-<div class"loader"></div>
 
-<div class="spinner">
-  <div class="double-bounce1"></div>
-  <div class="double-bounce2"></div>
+
+
+
+<!-- <div class="space">
+  <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
+  <div id="ship">
+    <div class="hull-top"></div>
+    <div class="hull-bottom"></div>
+    <div class="wings"></div>
+    <div class="nose"></div>
+  </div>
+</div> -->
+
+<div class="loader">
+  <div class="loader-circle">
+    <div>
+      <div class="loader moon-loader">
+        <div class="loader-circle">
+          <div class="loader-moon-size"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loader-sun"></div>
 </div>
 
 <!--MENU SECTION START-->
@@ -39,11 +62,17 @@
 
 <div class="mainDiv" onload="loadFunction">
   <br> <br> <br>
-
+  <div class="row">
   <div id="home" class="wum">
-    <h1 class="wum-r1">Coming <span class="wum-small">very</span> Soon...</h1>
+    <h1 class="wum-r1 col-xs-4 col-sm-6 col-md-10 col-lg-12">Coming
+      <span class="wum-small">
+        very
+      </span>
+      Soon...
+    </h1>
   </div>
-  <h1 class="mainTitle">Let's Launch In...</h1>
+</div>
+  <h1 class="mainTitle col-xs-12 col-sm-12 col-md-10 col-lg-12">Let's Launch In...</h1>
 
     <!--TEAM SECTION START-->
   <section id="team" >
@@ -280,6 +309,7 @@
 <script href="../../js/script.js" type="text/javascript">
   setTimeout(function() {
     $(".mainDiv").show();
-    $(".spinner").hide();
-  }, 3000);
+    $(".space").hide();
+    $(".loader").hide();
+  }, 3500);
 </script>

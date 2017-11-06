@@ -17,7 +17,7 @@ console.log("script.js file")
 
 
 $(document).ready(function () {
-
+console.log(document);
 /*====================================
 SCROLLING SCRIPTS
 ======================================*/
@@ -104,6 +104,19 @@ return false;
 /*====================================
 WRITE YOUR CUSTOM SCRIPTS BELOW
 ======================================*/
+
+
+  setTimeout(function() {
+    console.log(window);
+    $(".mainDiv").show();
+    $(".spinner").hide();
+  }, 3000);
+
+
+
+
+
+
 
 
 });

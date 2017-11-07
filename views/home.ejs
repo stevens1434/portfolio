@@ -2,8 +2,6 @@
 
 
 
-
-
 <!-- <div class="space">
   <div id="stars"></div>
   <div id="stars2"></div>
@@ -35,6 +33,7 @@
 <div class="p p-1"></div>
 <div class="p p-2"></div>
 <div class="p p-3"></div>
+<div class="p p-4"></div>
 <div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section" >
   <div class="container">
     <div class="navbar-header">
@@ -49,9 +48,9 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home">HOME</a></li>
+        <li><a href="#home" >HOME</a></li>
         <li><a href="#team">ABOUT ME</a></li>
-        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#services">EXPERIENCE</a></li>
         <li><a href="#work">WORK</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
@@ -163,56 +162,82 @@
         </div>
       </div>
     <div class="row animate-in" data-anim-type="fade-in-up">
-      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-        <div class="services-wrapper">
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="services-wrapper flipper">
           <i class="ion-document"></i>
-          <img class="experience" src='https://pbs.twimg.com/profile_images/1444136902/GA_logo_1797cog.png'/>
-          <h3>General Assembly</h3>
-          Morbi mollis lectus et ipsum sollicitudin varius.
-          Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.      </div>
+          <img class="experience front" src='https://pbs.twimg.com/profile_images/1444136902/GA_logo_1797cog.png'/>
+          <h3 class="front">General Assembly</h3>
+          <p class="front">Web development immersive <br><br>
+          Worked over 10 hours per day on building web development skills</p>
+          <div class="back">
+          <p id="back">Immersed in a 90+ hour/week, project intensive web development accelerator.
+            I designed and built games and web applications, which take advantage of full CRUD functionality and database integration.
+            I also took advantage of advanced authentication methods to secure my web applications and used Git for version control and studied best practices for DRY coding, RESTful routing, and pair programming.</p>
+          </div>
+        </div>
       </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="services-wrapper">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="services-wrapper flipper">
         <i class="ion-scissors"></i>
-        <img class="experience" src='https://angelhack.com/wp-content/uploads/2016/02/cropped-RedCrown-192x192.png'/>
-        <h3>AngelHack Hackathon</h3>
-        Morbi mollis lectus et ipsum sollicitudin varius.
-        Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.    </div>
+        <img class="experience front" src='https://angelhack.com/wp-content/uploads/2016/02/cropped-RedCrown-192x192.png'/>
+        <h3 class="front">AngelHack Hackathon</h3>
+        <p class="front">Developed Alexa app<br><br>
+        Technologies: Ruby on Rails, PostgreSQL, Node.js, and multiple API's</p>
+        <div class="back">
+        <p id="back">Placed in top three of over 150 people and over 30 projects for an application, which allows a user to take a photograph of your physical library to explore your books by leveraging image recognition and Amazon Alexa.
+We took advantage of Ruby on Rails, PostgreSQL, Node.js, Google Vision API, Google Books API, and Amazon Alexa.</p>
+        </div>
+      </div>
     </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="services-wrapper">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="services-wrapper flipper">
         <i class="ion-clipboard"></i>
-        <img class="experience" src='https://daks2k3a4ib2z.cloudfront.net/55ee73092774e56f726eb332/56e4a4ae79caaf3a7ae5a76e_headset-webclip.png'/>
-        <h3>Headset</h3>
-        Morbi mollis lectus et ipsum sollicitudin varius.
-        Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+        <img class="experience front" src='https://daks2k3a4ib2z.cloudfront.net/55ee73092774e56f726eb332/56e4a4ae79caaf3a7ae5a76e_headset-webclip.png'/>
+        <h3 class="front">Headset</h3>
+        <p class="front">Helped impliment new technologies and products <br><br>
+        Developed unique perspective into web development while working with CTO as a saleperson</p>
+        <div class="back headset">
+        <p id="back">In addition to leading the salesteam, I worked directly with CTO to incorporate and implement new technologies associated with consumer needs.</p>
+        </div>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="services-wrapper">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="services-wrapper flipper">
         <i class="ion-calendar"></i>
-        <img class="experience" src='http://www.cmaworld.com/cma-music-festival/wp-content/uploads/sites/15/2017/05/GetWristband-225x225.png'/>
-        <h3>FastBar</h3>
-        Morbi mollis lectus et ipsum sollicitudin varius.
-        Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+        <img class="experience front" src='http://www.cmaworld.com/cma-music-festival/wp-content/uploads/sites/15/2017/05/GetWristband-225x225.png'/>
+        <h3 class="front">FastBar</h3>
+        <p class="front">Worked with CTO to optimize user experience</p>
+        <div class="back fastbar">
+        <p id="back">Oversaw development, design, and execution of sales process and worked directly with CTO to carry out operational goals.</p>
+        </div>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="services-wrapper">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="services-wrapper flipper">
         <i class="ion-tshirt-outline"></i>
-        <img class="expimg" src='http://www.stineracing.com/images/links/hantz-logo.png'/>
-        <h3>Hantz Financial</h3>
-        Morbi mollis lectus et ipsum sollicitudin varius.
-        Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+        <img class="expimg front" src='http://www.stineracing.com/images/links/hantz-logo.png'/>
+        <h3 class="front">Hantz Financial</h3>
+        <p class="front">Financial Planner <br><br>
+          Managed turnaround of underperforming offices</p>
+        <div class="back hantz">
+        <p id="back">Hand picked by founder/CEO to manage underperforming office, driving up sales dramatically to become one of the top performing offices of 10.
+Mentored by Senior Vice President.</p>
+        </div>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-      <div class="services-wrapper">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="services-wrapper flipper">
         <i class="ion-speedometer"></i>
-        <img class="expimg" src='http://www.cts-companies.com/proofing/wp-content/uploads/cts-cloud-logo-350.png'/>
-        <h3>CTS Companies</h3>
-        Morbi mollis lectus et ipsum sollicitudin varius.
-        Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.
+        <img class="expimg front" src='http://www.cts-companies.com/proofing/wp-content/uploads/cts-cloud-logo-350.png'/>
+        <h3 class="front">CTS Companies</h3>
+        <p class="front">Managed Inventory, Accounts Receivables, and Financial Strategy <br><br>
+          Invested over $2million in assets for the firm</p>
+        <div class="back">
+        <p id="back">In separate roles managed inventory, accounts receivables, and aided in financial strategy.
+          I consolidated monthly inventory within a working database and increased efficiencies for a 20 person ops team.
+          I managed collection of over $100,000 of past due accounts.
+          Developed new investment opportunities using operating and non-operating assets worth over $2 million dollars.</p>
+        </div>
         </div>
       </div>
     </div>
@@ -238,7 +263,7 @@
             <a class="fancybox-media" title="Image Title Goes Here" href="http://via.placeholder.com/350x150">
               <img src="http://via.placeholder.com/350x150" class="img-responsive img-rounded" alt="" />
             </a>
-            <h4>Morbi mollis lectus et ipsum</h4>
+            <h4>Rainy Day</h4><p>Personal Finance App</p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 html code">
@@ -246,7 +271,7 @@
             <a class="fancybox-media" title="Image Title Goes Here" href="http://via.placeholder.com/350x150">
               <img src="http://via.placeholder.com/350x150" class="img-responsive img-rounded" alt="" />
             </a>
-            <h4>Morbi mollis lectus et ipsum</h4>
+            <h4>Maze Game</h4><p>Multi-Map Fun</p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 script">
@@ -254,7 +279,7 @@
             <a class="fancybox-media" title="Image Title Goes Here" href="http://via.placeholder.com/350x150">
               <img src="http://via.placeholder.com/350x150" class="img-responsive img-rounded" alt="" />
             </a>
-            <h4>Morbi mollis lectus et ipsum</h4>
+            <h4>Morbi mollis lectus et ipsum</h4><p>A Description of a Thing</p>
           </div>
         </div>
       </div>
@@ -312,4 +337,9 @@
     $(".space").hide();
     $(".loader").hide();
   }, 3500);
+  $(".flipper").hover(function() {
+    console.log("flipper hover");
+    $(".back").show();
+    $(".front").hide();
+  });
 </script>

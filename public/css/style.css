@@ -446,6 +446,67 @@ padding-top: 10px;
 }
 
 
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+  vertical-align: top;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	/*width: 320px;
+	height: 480px;*/
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+  max-height: 270px;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+  margin-top: 10px;
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+  position: relative;
+  top: -190px;
+  display: inline-block;
+  max-height: 270px;
+}
+
+.hantz {
+  top: -160px;
+}
+
+.fastbar {
+  top: -135px;
+}
+
+.headset {
+  top: -210px;
+}
 
 /*============================
 TEAM SECTION STYLES
@@ -532,6 +593,10 @@ color: rgb(57, 171, 111);
   }
 }
 
+#aboutText {
+  font-size: 20px;
+}
+
 /*.col-sm-push-0 {
   margin-left: 90px;
   width: 610px;
@@ -576,128 +641,53 @@ text-decoration:none;
   display: none;
 }
 
-.space {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 150px;
-  display: inline-block;
-}
-#ship {
-  position: absolute;
-  width: 20vw;
-  height: 7.5vw;
-  margin-top: -3.75vw;
-  top: 50%;
-  right: -20%;
-  transition: right 2.5s ;
-  animation: 5s ease-in-out infinite;
-}
-:hover #ship {
-  right: 120%;
-}
-#ship .hull {
-  position: absolute;
-  width: 100%;
-  height: 90%;
-  background: #888888;
-  border-top-left-radius: 100% 75%;
-  border-bottom-left-radius: 100% 75%;
-  border-top-right-radius: 25% 40%;
-  border-bottom-right-radius: 25% 40%;
-  transform-origin: 100% 50%;
-}
-#ship .hull-top {
-  position: absolute;
-  width: 100%;
-  height: 90%;
-  background: #888888;
-  border-top-left-radius: 100% 75%;
-  border-bottom-left-radius: 100% 75%;
-  border-top-right-radius: 25% 40%;
-  border-bottom-right-radius: 25% 40%;
-  transform-origin: 100% 50%;
-  z-index: 2;
-  background: linear-gradient(to bottom, #bbbbbb 10%, #888888 100%);
-  transform: rotate(-1deg);
-  animation: keel 5s ease-in-out infinite;
-}
-#ship .hull-bottom {
-  position: absolute;
-  width: 100%;
-  height: 90%;
-  background: #888888;
-  border-top-left-radius: 100% 75%;
-  border-bottom-left-radius: 100% 75%;
-  border-top-right-radius: 25% 40%;
-  border-bottom-right-radius: 25% 40%;
-  transform-origin: 100% 50%;
-  z-index: 0;
-  transform: rotate(1deg);
-  top: 10%;
-}
-#ship .wings {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  animation: spin 5s ease-in-out infinite;
-}
-#ship .wings:before,
-#ship .wings:after {
-  content: "";
-  background: #7b7b7b;
-  position: absolute;
-  width: 60%;
-  height: 50%;
-  right: 2%;
-}
-#ship .wings:before {
-  top: -6%;
-  transform: rotate(-15deg);
-}
-#ship .wings:after {
-  top: 56%;
-  transform: rotate(15deg);
-}
-@keyframes wobble {
-  0%,
-  100% {
-    transform: translate(-5vw, 2vw);
-  }
-  25% {
-    transform: translate(-10vw, -2vw);
-  }
-  50% {
-    transform: translate(-5vw, -2vw);
-  }
-  75% {
-    transform: translate(-10vw, 2vw);
-  }
-}
-@keyframes spin {
-  0%,
-  50%,
-  100% {
-    transform: rotateX(35deg);
-  }
-  25%,
-  75% {
-    transform: rotateX(0deg);
-  }
-}
-@keyframes keel {
-  0%,
-  50%,
-  100% {
-    height: 85%;
-  }
-  25%,
-  75% {
-    height: 88%;
-  }
+@keyframes particleAnimation
+{
+    from {
+        left: -100px;
+    }
+    to {
+        left: calc( 100% + 100px );
+    }
 }
 
+.p{
+  position:fixed;
+  left:0px;
+  top:50px;
+  width:1px;
+  height:1px;
+  background-color:white;
+  position:fixed;
+  animation-name:particleAnimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.p::before{
+  position:absolute;
+  display:block;
+  content:"";
+  width:100px;
+  right:1px;
+  top:0px;
+  height:1px;
+  background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(255,255,255,0.4) 100%);
+}
+.p-1{
+  animation-duration:10s;
+}
+.p-2{
+  animation-duration:8s;
+  top:60%;
+}
+.p-3{
+  animation-duration:13s;
+  top:90%;
+}
+.p-4{
+  animation-duration:16s;
+  top:40%;
+}
 
 /*++++++++++++++++++++++++++++++++++++++++++++*/
 
@@ -741,7 +731,7 @@ body {
     height: 10px;
     margin-left: 5px;
     border-radius: 50%;
-    background-color: #fefefe;
+    background-color: darkgreen;
 }
 
 .loader-circle > div.loader-moon-size {
@@ -767,6 +757,6 @@ body {
     margin-top: -9.5px;
     width: 21px;
     height: 21px;
-    background-color: #fefefe;
+    background-color: yellow;
     border-radius: 50%;
 }

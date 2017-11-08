@@ -285,7 +285,7 @@ border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 margin-bottom: 40px;
-background-color: rgba(255, 255, 255, 0.07);
+background-color: rgba(38, 117, 75, 0.35);
 cursor: pointer;
 -webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
@@ -294,7 +294,7 @@ transition: all 0.5s ease-in-out;
 }
 
 #services .services-wrapper:hover {
-background-color: rgba(255, 255, 255, 0.20);
+background-color: rgba(38, 117, 75, 0.35);
 }
 
 #services h3 {
@@ -312,10 +312,10 @@ font-size: 60px;
 	perspective: 1000px;
   vertical-align: top;
 }
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
 
 .flip-container, .front, .back {
 	/*width: 320px;
@@ -498,7 +498,7 @@ border-radius: 5px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 margin-bottom: 40px;
-background-color: rgba(255, 255, 255, 0.1);
+background-color: rgba(38, 117, 75, 0.35);
 cursor: pointer;
 -webkit-transition: all 0.5s ease-in-out;
 -moz-transition: all 0.5s ease-in-out;
@@ -543,7 +543,7 @@ TEAM SECTION STYLES
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   margin-bottom: 40px;
-  background-color: rgba(255, 255, 255, 0.07);
+  background-color: rgba(38, 117, 75, 0.35);
   cursor: pointer;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -569,6 +569,9 @@ width: 250px;
 -o-transform: scale(1.1);
 transform: scale(1.1);
 max-width: 240px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 10px;
 }
 .team-wrapper .team-inner {
 background-size: cover;
@@ -584,7 +587,6 @@ border-radius: 10px 10px 0px 0px;
 }
 
 .team-wrapper > .team-inner > a {
-color: rgb(38, 117, 75);
 width: 80px;
 height: 80px;
 border-radius: 50%;
@@ -619,7 +621,7 @@ border-left: 1px solid #fff;
 }
 
 .team-wrapper .description h5 {
-color: rgb(38, 117, 75);
+color: rgb(13, 177, 75);
 }
 
 @media (max-width: 1197px) and (min-width: 993px) {
@@ -628,6 +630,33 @@ color: rgb(38, 117, 75);
     width: 610px;
   }
 }
+
+@media (max-width: 992px) {
+    .col-sm-push-0 {
+            text-align: center;
+     }
+     #team > .container-fluid > .row > div > div {
+       position: relative;
+       margin: 0 auto;
+       transform: translateX(45%);
+     }
+  }
+
+@media (max-width: 570px) {
+     #team > .container-fluid > .row > div > div {
+       position: relative;
+       margin: 0 auto;
+       transform: translateX(30%);
+     }
+  }
+
+@media (max-width: 540px) {
+     #team > .container-fluid > .row > div > div {
+       position: relative;
+       margin: 0 auto;
+       transform: translateX(25%);
+     }
+  }
 
 #aboutText {
   font-size: 20px;
@@ -645,7 +674,7 @@ CONTACT SECTION STYLES
 ==============================*/
 
 #contact .contact-wrapper {
-background-color:rgba(255, 255, 255, 0.1);
+background-color: rgba(38, 117, 75, 0.35);
 padding: 20px;
 border-radius: 5px;
 -moz-border-radius: 5px;
@@ -654,7 +683,7 @@ margin-bottom: 40px;
 min-height:200px;
 }
 #contact .contact-wrapper h3 {
-color:rgb(38, 117, 75);
+color: rgb(13, 177, 75);
 }
 #contact .social-below {
 display: block;

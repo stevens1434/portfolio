@@ -39,12 +39,17 @@ GENERAL STYLES
 body {
 color: #fff;
 background-image: linear-gradient(180deg,
-      /*rgba(0, 38, 19, 0.35),*/
       rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2)
     ),
-    url('http://wallup.net/wp-content/uploads/2016/01/316346-simple_background-simple-space-astronaut-flag.jpg');
-    /*url('../img/spaceman.jpg');*/
+    /*url('http://wallup.net/wp-content/uploads/2016/01/316346-simple_background-simple-space-astronaut-flag.jpg');*/
+    url('../img/space2.jpg');
+/*color: #73757a;
+background-image: url('../img/spaceman.jpg');
+background-color: rgba(239, 240, 242, 1);*/
 background-size: cover;
 background-repeat:no-repeat;
 background-attachment: fixed;
@@ -56,7 +61,7 @@ z-index: 1;
 
 
 a:hover {
-  color: rgb(57, 171, 111);
+  color: rgb(38, 117, 75);
 }
 
 section {
@@ -69,7 +74,7 @@ h3 {
 }
 
 hr {
-  border-color: rgb(57, 171, 111);
+  border-color: rgb(38, 117, 75);
 }
 
 .wum {
@@ -97,7 +102,7 @@ hr {
   vertical-align: middle;
   margin-top: -0.44em;
   padding-right: 0.2em;
-  border: 0.3em solid rgb(57, 171, 111);
+  border: 0.3em solid rgb(38, 117, 75);
   border-right: 0;
   border-left: 0;
   text-transform: lowercase;
@@ -110,7 +115,7 @@ hr {
 .mainTitle {
   font-size: 60px;
   font-family: 'Bungee', cursive;
-  color: rgb(57, 171, 111);
+  color: rgb(38, 117, 75);
 }
 .subTitle {
   font-size: 27px;
@@ -141,7 +146,7 @@ text-transform: uppercase;
 
 .header hr {
 width: 50px;
-border-top: 2px solid rgb(57, 171, 111);
+border-top: 2px solid rgb(38, 117, 75);
 }
 
 
@@ -163,23 +168,23 @@ margin: 5px;
 .btn-custom-one {
 background-color: transparent;
 color: #fff;
-border: 2px solid rgb(57, 171, 111);
+border: 2px solid rgb(38, 117, 75);
 }
 
 .btn-custom-one:hover {
-background-color: rgb(57, 171, 111);
+background-color: rgb(38, 117, 75);
 text-decoration: none;
 color: #fff;
 }
 
 .btn-custom-two {
 color: #fff;
-background-color: rgb(57, 171, 111);
-border: 2px solid rgb(57, 171, 111);
+background-color: rgb(38, 117, 75);
+border: 2px solid rgb(38, 117, 75);
 }
 
 .btn-custom-two:hover {
-border: 2px solid rgb(57, 171, 111);
+border: 2px solid rgb(38, 117, 75);
 text-decoration: none;
 color: #fff;
 background-color: transparent;
@@ -201,7 +206,7 @@ border-color: transparent;
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
 background-color: transparent;
-border-bottom: 1px solid rgb(57, 171, 111);
+border-bottom: 1px solid rgb(38, 117, 75);
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -218,7 +223,7 @@ font-weight: 800;
 padding: 5px 0px;
 letter-spacing: 2px;
 margin: 10px 20px 10px 20px;
-color: rgb(57, 171, 111);
+color: rgb(38, 117, 75);
 }
 
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:hover {
@@ -231,10 +236,10 @@ font-family: 'Oswald', sans-serif;
 border-color: transparent;
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-background-color: rgb(57, 171, 111);
+background-color: rgb(38, 117, 75);
 }
 .navbar-inverse .navbar-toggle {
-border-color: rgb(57, 171, 111);
+border-color: rgb(38, 117, 75);
 }
 
 
@@ -264,7 +269,7 @@ font-family: 'Oswald', sans-serif;
 }
 
 #carousel-slider p {
-color: rgb(57, 171, 111);
+color: rgb(38, 117, 75);
 font-size: 16px;
 line-height: 25px;
 margin: 25px 20px;
@@ -298,8 +303,80 @@ font-family: 'Oswald', sans-serif;
 
 #services .services-wrapper i {
 margin: 5px;
-color: rgb(57, 171, 111);
+color: rgb(38, 117, 75);
 font-size: 60px;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+  vertical-align: top;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	/*width: 320px;
+	height: 480px;*/
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+  max-height: 270px;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+  margin-top: 10px;
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+}
+
+.experience {
+  max-height: 70px;
+  width: 70px;
+}
+
+.expimg {
+  max-height: 100px;
+  width: 120px;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+  vertical-align: bottom;
+  display: inline-block;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+  position: relative;
+  top: -190px;
+  display: inline-block;
+  max-height: 270px;
+}
+
+.hantz {
+  top: -160px;
+}
+
+.fastbar {
+  top: -135px;
+}
+
+.headset {
+  top: -210px;
 }
 
 
@@ -363,7 +440,7 @@ padding: 30px 20px;
 font-weight: 900;
 text-transform: uppercase;
 font-size: 30px;
-color: rgb(57, 171, 111);
+color: rgb(38, 117, 75);
 }
 
 .light-pricing .pricing-footer {
@@ -393,16 +470,6 @@ padding-top: 80px;
 WORK SECTION STYLES
 ==============================*/
 
-.experience {
-  max-height: 70px;
-  width: 70px;
-}
-
-.expimg {
-  max-height: 100px;
-  width: 120px;
-}
-
 #work .caegories a.active {
 background-color: transparent;
 color: #fff;
@@ -426,12 +493,12 @@ cursor: pointer;
 -moz-transition: all 0.5s ease-in-out;
 -o-transition: all 0.5s ease-in-out;
 transition: all 0.5s ease-in-out;
-border: 1px solid rgb(57, 171, 111);
+border: 1px solid rgb(38, 117, 75);
 }
 
 #work .work-wrapper:hover {
 background-color: transparent;
-border: 1px solid rgb(57, 171, 111);
+border: 1px solid rgb(38, 117, 75);
 
 opacity: .80; /* standard: ff gt 1.5, opera, safari */
 -ms-filter: "alpha(opacity=80)"; /* ie 8 */
@@ -445,67 +512,11 @@ filter: alpha(opacity=80); /* ie lt 7 */
 padding-top: 10px;
 }
 
+.workimg {
+  height: 80%;
+  width: 90%;
 
-/* entire container, keeps perspective */
-.flip-container {
-	perspective: 1000px;
-  vertical-align: top;
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	/*width: 320px;
-	height: 480px;*/
-}
-
-/* flip speed goes here */
-.flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-  max-height: 270px;
-	position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
-  margin-top: 10px;
-	/*position: absolute;
-	top: 0;
-	left: 0;*/
-}
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-	transform: rotateY(0deg);
-  vertical-align: bottom;
-  display: inline-block;
-}
-
-/* back, initially hidden pane */
-.back {
-	transform: rotateY(180deg);
-  position: relative;
-  top: -190px;
-  display: inline-block;
-  max-height: 270px;
-}
-
-.hantz {
-  top: -160px;
-}
-
-.fastbar {
-  top: -135px;
-}
-
-.headset {
-  top: -210px;
+  border-radius: 3px;
 }
 
 /*============================
@@ -514,6 +525,20 @@ TEAM SECTION STYLES
 /*.animate-in {
   max-width: 250px;
 }*/
+
+.container-fluid {
+  padding: 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.07);
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
 
 .team-wrapper {
 overflow-x: hidden;
@@ -548,7 +573,7 @@ border-radius: 10px 10px 0px 0px;
 }
 
 .team-wrapper > .team-inner > a {
-color: rgb(57, 171, 111);
+color: rgb(38, 117, 75);
 width: 80px;
 height: 80px;
 border-radius: 50%;
@@ -556,7 +581,7 @@ border-radius: 50%;
 -webkit-border-radius: 50%;
 margin: 0 auto -50px;
 display: block;
-color: rgb(57, 171, 111);
+color: rgb(38, 117, 75);
 z-index: 999;
 font-size: 40px;
 padding: 15px 22px;
@@ -570,7 +595,7 @@ transition: all 0.8s ease-in-out;
 .team-wrapper > .team-inner > a:hover {
 color: #fff;
 text-decoration: none;
-background-color: rgb(57, 171, 111);
+background-color: rgb(38, 117, 75);
 }
 
 
@@ -583,7 +608,7 @@ border-left: 1px solid #fff;
 }
 
 .team-wrapper .description h5 {
-color: rgb(57, 171, 111);
+color: rgb(38, 117, 75);
 }
 
 @media (max-width: 1197px) and (min-width: 993px) {
@@ -618,7 +643,7 @@ margin-bottom: 40px;
 min-height:200px;
 }
 #contact .contact-wrapper h3 {
-color:rgb(57, 171, 111);
+color:rgb(38, 117, 75);
 }
 #contact .social-below {
 display: block;

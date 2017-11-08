@@ -631,6 +631,25 @@ color: rgb(13, 177, 75);
   }
 }
 
+/*.centerwrap {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+.teambox {
+  display: inline-block;
+  position: relative;
+  margin: 5 auto;
+}*/
+
+#team > .container-fluid > .row > div > div {
+  display: inline-block;
+  text-align: center;
+  align-content: center;
+}
+
+
 @media (max-width: 992px) {
     .col-sm-push-0 {
             text-align: center;
